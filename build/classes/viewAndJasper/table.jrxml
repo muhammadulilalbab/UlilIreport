@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b73ca14d-f293-41f4-ae80-54ca30a2deb1">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="report_creator" class="java.lang.String"/>
+	<field name="student_id" class="java.lang.String"/>
+	<field name="student_name" class="java.lang.String"/>
+	<field name="student_class" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="81fe5859-f712-42e4-bf1a-3bebeab5c391"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student List]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="555" height="20" uuid="8d362488-d701-4134-8031-5bb15a5c2cb3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(How to create an incremental row table in ireport)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="555" height="20" uuid="4275bb93-6dfa-4daa-b902-11103361b0a8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[github.com/muhammadulilalbab]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="555" height="20" uuid="3b2cc318-d3b4-4522-9b0b-b6f862167389"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[facebook.com/muhammadulilalbab]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="555" height="20" uuid="f265eff9-c995-4af7-be9b-601220ff9f3c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[http://www.ulil-albab.com]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="20" uuid="d59c9e1a-acf8-4f06-a3e5-2136ceaded0c"/>
+				<staticText>
+					<reportElement x="0" y="0" width="42" height="20" uuid="11c4bd5a-99dd-49c9-8921-0ea640ccf91b"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<text><![CDATA[No.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="42" y="0" width="100" height="20" uuid="8e800919-1415-4d10-b705-f04d0dddf3a4"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<text><![CDATA[Student ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="142" y="0" width="221" height="20" uuid="adbbf98a-2416-4084-8629-7191ea33e2f4"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<text><![CDATA[Student Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="363" y="0" width="192" height="20" uuid="65d347f4-54ec-4ada-8662-acb9f491d879"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<text><![CDATA[Class]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="42" height="20" uuid="72737f5b-2be7-4c6b-821b-02ff5cc4c20f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="42" y="0" width="100" height="20" uuid="5835667c-08d5-44ea-acec-1ac81c07ccb3"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{student_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="0" width="221" height="20" uuid="939cec90-42f1-4f6c-aad6-9d7e2bd2c629"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{student_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="363" y="0" width="192" height="20" uuid="9a010a01-4495-47f4-9b43-a1bc2a152532"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{student_class}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="0880641e-59bc-44c2-b6ab-32153bc35604"/>
+				<text><![CDATA[Report Created By :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="8a845960-55cc-4b6f-9369-3ec0559431df"/>
+				<textFieldExpression><![CDATA[$P{report_creator}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
